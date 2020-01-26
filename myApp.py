@@ -34,8 +34,6 @@ def findEncodingInfo(txt):
 def get_gmail(email, password):
     global imap
     imap = imaplib.IMAP4_SSL('imap.gmail.com')
-    # email = 'mnoko92@gmail.com'
-    # password = 'slikifzvedcxtsck'
     imap.login(email, password)
     imap.select('inbox') # 받은 편지함
     resp, data = imap.uid('search', None, 'All') # 받은 편지함 모든 메일 검색
